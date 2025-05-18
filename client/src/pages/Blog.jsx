@@ -37,7 +37,7 @@ const Blog = () => {
     <div className="flex flex-col justify-center items-center md:max-w-xl md:flex-row">
       <img
         className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg m-1"
-        src={`http://localhost:5000/images/${blog.image}`}
+        src={`https://blog-app-ispb.onrender.com/images/${blog.image}`}
         alt={blog.title} />
       <div className="flex flex-col justify-start p-6">
         <h5
