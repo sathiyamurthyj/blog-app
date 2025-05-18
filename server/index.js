@@ -17,7 +17,7 @@ const app = express();
 // middlewares
 app.use(express.json());
 app.use(cors({
-      origin: 'http://localhost:5173', 
+      origin: 'https://jovial-belekoy-592263.netlify.app', 
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       credentials: true,
 }));
