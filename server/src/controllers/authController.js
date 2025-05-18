@@ -26,7 +26,10 @@ const login = async(req,res)=>{
             return res.status(400).json({success: false, message:"Invalid password"});
         }
         const token = jwt.sign({id: user._id,name: user.name,email:user.email},process.env.JWT_SECRET,{expiresIn:"1d"});
-        res.cookie("token", token);
+        res.cookie("token", token,{
+        secure: true,
+        sameSite: 'none'
+      });
         return res.status(200).json({success: true,message:"Logged In successfully"});
 
     } catch (error) {
